@@ -5,11 +5,13 @@
 using namespace std;
 
 class Tiles{
-    private:
-		int m_symbol;
+    protected:
+		char symbol;
     public:
-		Tiles(int symbol);
-        virtual void pop()=0;
-		void setSymbol(int symbol);
-		int getSymbol();
+		Tiles(char _symbol = ' ');
+
+        virtual void pop();
+
+		void setSymbol(char _symbol);
+		char getSymbol();
 };

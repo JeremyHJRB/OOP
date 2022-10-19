@@ -1,14 +1,18 @@
 #include "Header/Tiles.h"
 using namespace std;
 
-Tiles::Tiles(int symbol){
-	m_symbol = symbol;
+Tiles::Tiles(char _symbol){
+	this -> symbol = _symbol;
 }
 
-void Tiles::setSymbol(int symbol){
-	m_symbol = symbol;
+void Tiles::setSymbol(char _symbol){
+	this -> symbol = _symbol;
 }
 
-int Tiles::getSymbol(){
-	return m_symbol;
+char Tiles::getSymbol(){
+	return this -> symbol;
+}
+
+void Tiles::pop(){
+	setSymbol(' ');
 }

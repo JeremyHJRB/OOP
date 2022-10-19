@@ -1,10 +1,17 @@
-#include "Header/Rocket.h"
+#include "Header/RocketTiles.h"
 #include <iostream>
 using namespace std;
 
-Rocket::Rocket(int Symbol) : Tiles(Symbol){
-}
+RocketTiles::RocketTiles() : Tiles('^'){};
 
-void Rocket::pop(){
-		cout << "Rocket Meluncur" << endl;
-}
+RocketTiles::RocketTiles(char _symbol) : Tiles(_symbol){
+	this -> symbol = _symbol;
+};
+
+void RocketTiles::setSymbol(char _symbol){
+	this -> symbol = _symbol;
+};
+
+char RocketTiles::getSymbol(){
+	return this -> symbol;
+};
